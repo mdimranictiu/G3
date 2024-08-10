@@ -7,6 +7,9 @@
   font-weight: 400;
   font-style: normal;
 }
+body{
+    overflow-x:hidden;
+}
 /* Shared styles */
 .display-flex{
     display: flex;
@@ -102,9 +105,69 @@ gap: 73px;
 .our-features{
     max-width: 530px;
 }
-.features-title{
+.features-title,.section-title{
     font-size: 45px;
 font-weight: 700;margin-bottom: 24px;
+}
+.card-items{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 124px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+.card-item{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+border: 1px solid rgb(255, 144, 14);
+border-radius: 8px;
+justify-content: center;
+align-items: center;
+width: 240px;
+height: 240px;
+
+}
+.card-item img{
+    width: 50px;
+    height: 45px;
+   
+}
+.count{
+    color: rgb(66, 66, 66);
+font-family: Work Sans;
+font-size:2rem;
+font-weight: 600;
+margin-bottom: 5px;
+margin-top: 10px;
+}
+.description-title{
+    max-width: 540px;
+}
+.sponsored-title{
+color: rgb(19, 19, 19);
+font-family: Work Sans;
+font-size: 45px;
+font-weight: 700;
+text-align: center;
+margin-bottom: 40px;
+}
+.sp-title{
+    color: rgb(114, 114, 114);
+font-family: Work Sans;
+font-size: 16px;
+text-align: center;
+margin-bottom: 50px;
+
+}
+.sp-items{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 150px;
+    margin-bottom: 130px;
+}
+.sp-item img{
+    filter: grayscale(100%);
 }
 /* Responsive Media Query */
 @media screen and (max-width:576px){
@@ -117,6 +180,22 @@ font-weight: 700;margin-bottom: 24px;
   .our-features{
     margin-left: 20px;
   }
+  .card-items{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+.card-item{
+    margin: 10px auto;
+}
+.sp-items{
+    grid-template-columns:1fr;
+    gap: 20px;
+  
+}
+.sp-item{
+    margin: 10px auto;
+}
 }
 @media  screen and (min-width:576px) and (max-width:991px) {
     .teams{
@@ -124,5 +203,10 @@ font-weight: 700;margin-bottom: 24px;
     }
     .our-features{
        margin-left: 50px auto; 
+    }
+    .sp-items,.card-items{
+        grid-template-columns: repeat(2,1fr);
+        gap: 50px;
+        justify-items: center;
     }
 }
